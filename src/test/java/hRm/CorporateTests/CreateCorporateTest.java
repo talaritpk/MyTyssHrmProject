@@ -7,6 +7,7 @@ import org.apache.poi.hpsf.HPSFException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import hRm.GenericLibrary.BaseClass;
@@ -29,9 +30,10 @@ public class CreateCorporateTest extends BaseClass {
 
 		CorporatePage cp = new CorporatePage(driver);
 		cp.createcorporate();
-		cp.enterCorNameAndSave("HrmApp", 2, 0);
+		cp.enterCorNameAndSave("CorN", 2, 0);
 		String alText = wL.getAlertText(driver);
 		Assert.assertEquals(alText, "Insert Successfully!!!");
+		Reporter.log(alText,true);
 		wL.acceptAlert(driver);
 
 	}

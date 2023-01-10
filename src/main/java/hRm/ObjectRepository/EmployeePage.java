@@ -1,6 +1,7 @@
 package hRm.ObjectRepository;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebDriver;
@@ -81,6 +82,9 @@ public class EmployeePage {
 	@FindBy(xpath = "//tbody/tr[1]/td[9]/i[2]")
 	private WebElement deleteLookUpIamgeElement;
 	
+	@FindBy(xpath = "//button[.='Delete']")
+	private List<WebElement> deleteBtnElement;
+	
 	
 	
 	
@@ -90,10 +94,36 @@ public class EmployeePage {
 	public EmployeePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
+	
+	
+	
+	
 
 	
 	
 	
+	public List<WebElement> getDeleteBtnElement() {
+		return deleteBtnElement;
+	}
+
+
+
+
+
+
+
+
+	public void setDeleteBtnElement(List<WebElement> deleteBtnElement) {
+		this.deleteBtnElement = deleteBtnElement;
+	}
+
+
+
+
+
+
+
+
 	public WebElement getDeleteLookUpIamgeElement() {
 		return deleteLookUpIamgeElement;
 	}
@@ -251,7 +281,7 @@ public class EmployeePage {
 		Runtime.getRuntime().exec("C:\\Users\\tpkta\\OneDrive\\Desktop\\AutoIt\\File201SoftCopy.au4.exe");
 		Thread.sleep(10000);
 		saveBtnElement.click();
-		wl.acceptAlert(driver);
+		
 		
 	}
 

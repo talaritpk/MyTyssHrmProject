@@ -62,10 +62,10 @@ public class BaseClass {
 	public void bmConfig() throws IOException {
 
 		LoginPage lp = new LoginPage(driver);
-		Scanner scanner = new Scanner(System.in);
+		/*Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter User");
-		String user = scanner.nextLine();
-		if (user.equalsIgnoreCase("admin"))
+		String user = scanner.nextLine();*/
+		if (true/*user.equalsIgnoreCase("admin")*/)
 		{
 			lp.loginToHrmAsHr(driver);
 			HomePage hp = new HomePage(driver);
@@ -74,7 +74,7 @@ public class BaseClass {
 			Assert.assertEquals(adminMail, Uname);
 			Reporter.log("Home Page is Displayed", true);
 		} 
-		else if (user.equalsIgnoreCase("hrofficer"))
+		/*else if (user.equalsIgnoreCase("hrofficer"))
 		{
 			lp.loginToHrmAsHrOff(driver);
 		}
@@ -85,7 +85,7 @@ public class BaseClass {
 		else 
 		{
 			System.out.println("Invalid User");
-		}
+		}*/
 	}
 
 	@AfterMethod

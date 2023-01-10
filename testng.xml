@@ -3,10 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="hRm.BranchTests.CreateBranch"/>
-      <class name="hRm.CorporateTests.CreateCorporateTest"/>
-      <class name="hRm.AdminTests.CreateAdmin"/>
+     <!--  <class name="hRm.HrAssistant.CreateNewEmployeeAsHrAsstTest"/>-->
+      <class name="hRm.CorporateTests.CreateMultipleCorporates"/>
       <class name="hRm.EmployeeTests.CreateEmployeeTest"/>
+      <class name="hRm.AdminTests.CreateAdminTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

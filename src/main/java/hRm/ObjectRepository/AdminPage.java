@@ -7,6 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.Reporter;
+
+import com.github.javafaker.Faker;
 
 import hRm.GenericLibrary.ExcelFileLibrary;
 import hRm.GenericLibrary.WebDriverLibrary;
@@ -116,6 +120,21 @@ public class AdminPage extends WebDriverLibrary{
 		acceptAlert(driver);
 		
 		
+	}
+	
+	public void addAdminFaker(WebDriver driver) throws EncryptedDocumentException, IOException
+	{
+		Faker fk=new Faker();
+		addAdminRhnElement.click();
+		cidTFElement.sendKeys(fk.number().digits(6));
+		firstNameTFelElement.sendKeys(fk.name().firstName());
+		lastNameTFelElement.sendKeys(fk.name().lastName());
+		middleNameTFelElement.sendKeys(fk.name().nameWithMiddle());
+		cNoTFelElement.sendKeys(fk.number().digits(11));
+		handleDropDown(hrTypeDDelElement, fk.number().numberBetween(0, 4));
+		emailTFelElement.sendKeys(fk.internet().emailAddress());
+		pwdTFelElement.sendKeys(fk.internet().password());
+		saveBtnElement.click();
 	}
 
 }
