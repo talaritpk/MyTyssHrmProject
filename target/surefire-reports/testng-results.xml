@@ -1,169 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="11" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[Home Page is Displayed]]>
-    </line>
-    <line>
-      <![CDATA[Insert Successfully!!!]]>
-    </line>
-    <line>
-      <![CDATA[Home Page is Displayed]]>
-    </line>
-    <line>
-      <![CDATA[Insert Successfully!!!]]>
-    </line>
   </reporter-output>
-  <suite started-at="2023-01-10T09:48:35 IST" name="Suite" finished-at="2023-01-10T09:49:38 IST" duration-ms="63410">
+  <suite started-at="2023-03-11T19:53:57 IST" name="practice.ReadDataFromCmd" finished-at="2023-03-11T19:54:01 IST" duration-ms="3827">
     <groups>
     </groups>
-    <test started-at="2023-01-10T09:48:35 IST" name="Test" finished-at="2023-01-10T09:49:38 IST" duration-ms="63410">
-      <class name="hRm.CorporateTests.CreateMultipleCorporates">
-        <test-method signature="createMultipleCor(java.lang.String)[pri:0, instance:hRm.CorporateTests.CreateMultipleCorporates@2667f029]" started-at="2023-01-10T09:48:35 IST" name="createMultipleCor" data-provider="MultipleCor" finished-at="2023-01-10T09:48:41 IST" duration-ms="6069" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Tyss]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2023-03-11T19:53:57 IST" name="Command line test" finished-at="2023-03-11T19:54:01 IST" duration-ms="3827">
+      <class name="practice.ReadDataFromCmd">
+        <test-method signature="readDataFrom()[pri:0, instance:practice.ReadDataFromCmd@453da22c]" started-at="2023-03-11T19:53:57 IST" name="readDataFrom" finished-at="2023-03-11T19:54:00 IST" duration-ms="3800" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createMultipleCor -->
-        <test-method signature="createMultipleCor(java.lang.String)[pri:0, instance:hRm.CorporateTests.CreateMultipleCorporates@2667f029]" started-at="2023-01-10T09:48:41 IST" name="createMultipleCor" data-provider="MultipleCor" finished-at="2023-01-10T09:48:48 IST" duration-ms="7299" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Infosys]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createMultipleCor -->
-        <test-method signature="createMultipleCor(java.lang.String)[pri:0, instance:hRm.CorporateTests.CreateMultipleCorporates@2667f029]" started-at="2023-01-10T09:48:48 IST" name="createMultipleCor" data-provider="MultipleCor" finished-at="2023-01-10T09:48:56 IST" duration-ms="7832" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Tcs]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createMultipleCor -->
-        <test-method signature="createMultipleCor(java.lang.String)[pri:0, instance:hRm.CorporateTests.CreateMultipleCorporates@2667f029]" started-at="2023-01-10T09:48:56 IST" name="createMultipleCor" data-provider="MultipleCor" finished-at="2023-01-10T09:49:04 IST" duration-ms="7423" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Rinl]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createMultipleCor -->
-        <test-method signature="pavan1(java.lang.String,java.lang.String)[pri:0, instance:hRm.CorporateTests.CreateMultipleCorporates@2667f029]" started-at="2023-01-10T09:49:04 IST" name="pavan1" data-provider="mul" finished-at="2023-01-10T09:49:04 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[c]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[d]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pavan1 -->
-        <test-method signature="pavan1(java.lang.String,java.lang.String)[pri:0, instance:hRm.CorporateTests.CreateMultipleCorporates@2667f029]" started-at="2023-01-10T09:49:04 IST" name="pavan1" data-provider="mul" finished-at="2023-01-10T09:49:04 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[a]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pavan1 -->
-        <test-method signature="readData2()[pri:0, instance:hRm.CorporateTests.CreateMultipleCorporates@2667f029]" started-at="2023-01-10T09:49:04 IST" name="readData2" finished-at="2023-01-10T09:49:04 IST" duration-ms="86" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- readData2 -->
-      </class> <!-- hRm.CorporateTests.CreateMultipleCorporates -->
-      <class name="hRm.AdminTests.CreateAdminTest">
-        <test-method is-config="true" signature="bcConfig()[pri:0, instance:hRm.AdminTests.CreateAdminTest@393671df]" started-at="2023-01-10T09:49:31 IST" name="bcConfig" finished-at="2023-01-10T09:49:33 IST" duration-ms="2310" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bcConfig -->
-        <test-method is-config="true" signature="bmConfig()[pri:0, instance:hRm.AdminTests.CreateAdminTest@393671df]" started-at="2023-01-10T09:49:33 IST" name="bmConfig" finished-at="2023-01-10T09:49:35 IST" duration-ms="1352" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Home Page is Displayed]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- bmConfig -->
-        <test-method signature="createAdmin()[pri:0, instance:hRm.AdminTests.CreateAdminTest@393671df]" started-at="2023-01-10T09:49:35 IST" name="createAdmin" finished-at="2023-01-10T09:49:37 IST" duration-ms="2441" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Insert Successfully!!!]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- createAdmin -->
-        <test-method is-config="true" signature="amConfig()[pri:0, instance:hRm.AdminTests.CreateAdminTest@393671df]" started-at="2023-01-10T09:49:37 IST" name="amConfig" finished-at="2023-01-10T09:49:38 IST" duration-ms="738" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- amConfig -->
-        <test-method is-config="true" signature="acConfig()[pri:0, instance:hRm.AdminTests.CreateAdminTest@393671df]" started-at="2023-01-10T09:49:38 IST" name="acConfig" finished-at="2023-01-10T09:49:38 IST" duration-ms="205" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- acConfig -->
-      </class> <!-- hRm.AdminTests.CreateAdminTest -->
-      <class name="hRm.EmployeeTests.CreateEmployeeTest">
-        <test-method is-config="true" signature="bsConfig()[pri:0, instance:hRm.EmployeeTests.CreateEmployeeTest@20ce78ec]" started-at="2023-01-10T09:48:35 IST" name="bsConfig" finished-at="2023-01-10T09:48:35 IST" duration-ms="8" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bsConfig -->
-        <test-method is-config="true" signature="bcConfig()[pri:0, instance:hRm.EmployeeTests.CreateEmployeeTest@20ce78ec]" started-at="2023-01-10T09:49:04 IST" name="bcConfig" finished-at="2023-01-10T09:49:08 IST" duration-ms="4110" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bcConfig -->
-        <test-method is-config="true" signature="bmConfig()[pri:0, instance:hRm.EmployeeTests.CreateEmployeeTest@20ce78ec]" started-at="2023-01-10T09:49:08 IST" name="bmConfig" finished-at="2023-01-10T09:49:10 IST" duration-ms="2187" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Home Page is Displayed]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- bmConfig -->
-        <test-method signature="createNewEmployeeTest()[pri:0, instance:hRm.EmployeeTests.CreateEmployeeTest@20ce78ec]" started-at="2023-01-10T09:49:10 IST" name="createNewEmployeeTest" finished-at="2023-01-10T09:49:30 IST" duration-ms="19951" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Insert Successfully!!!]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- createNewEmployeeTest -->
-        <test-method is-config="true" signature="amConfig()[pri:0, instance:hRm.EmployeeTests.CreateEmployeeTest@20ce78ec]" started-at="2023-01-10T09:49:30 IST" name="amConfig" finished-at="2023-01-10T09:49:31 IST" duration-ms="753" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- amConfig -->
-        <test-method is-config="true" signature="acConfig()[pri:0, instance:hRm.EmployeeTests.CreateEmployeeTest@20ce78ec]" started-at="2023-01-10T09:49:31 IST" name="acConfig" finished-at="2023-01-10T09:49:31 IST" duration-ms="137" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- acConfig -->
-        <test-method is-config="true" signature="asConfig()[pri:0, instance:hRm.EmployeeTests.CreateEmployeeTest@20ce78ec]" started-at="2023-01-10T09:49:38 IST" name="asConfig" finished-at="2023-01-10T09:49:38 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- asConfig -->
-      </class> <!-- hRm.EmployeeTests.CreateEmployeeTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- readDataFrom -->
+      </class> <!-- practice.ReadDataFromCmd -->
+    </test> <!-- Command line test -->
+  </suite> <!-- practice.ReadDataFromCmd -->
 </testng-results>

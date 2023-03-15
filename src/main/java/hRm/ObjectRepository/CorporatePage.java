@@ -1,6 +1,7 @@
 package hRm.ObjectRepository;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
@@ -53,6 +54,10 @@ public class CorporatePage  extends BaseClass{
 	private WebElement deleteBtnElement;
 	
 	
+	@FindBy(xpath = "//div[@class='card-body']//button[.='Delete']")
+	private List<WebElement> deleteBtnElements;
+	
+	
 	
 	
 	
@@ -67,6 +72,68 @@ public class CorporatePage  extends BaseClass{
 	
 	
 	
+	
+	
+	public List<WebElement> getDeleteBtnElements() {
+		return deleteBtnElements;
+	}
+
+
+
+
+
+
+
+	public void setDeleteBtnElements(List<WebElement> deleteBtnElements) {
+		this.deleteBtnElements = deleteBtnElements;
+	}
+
+
+
+
+
+
+
+	public ExcelFileLibrary getEfl() {
+		return efl;
+	}
+
+
+
+
+
+
+
+	public WebDriverLibrary getWl() {
+		return wl;
+	}
+
+
+
+
+
+
+
+	public JavaLibrary getrL() {
+		return rL;
+	}
+
+
+
+
+
+
+
+	public WebElement getEditBtnElement() {
+		return editBtnElement;
+	}
+
+
+
+
+
+
+
 	public WebElement getNoDD() {
 		return noDD;
 	}
@@ -125,6 +192,11 @@ public class CorporatePage  extends BaseClass{
 		corLinkElement.click();
 		addCorElement.click();
 		addCorRhnElement.click();
+	}
+	public void clickOncorLinks()
+	{
+		corLinkElement.click();
+		addCorElement.click();
 	}
 	public void enterCorNameAndSave(String sheetName,int rowNo,int cellNo) throws EncryptedDocumentException, IOException
 	{

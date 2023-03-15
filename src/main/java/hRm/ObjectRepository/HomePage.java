@@ -40,6 +40,9 @@ public class HomePage {
 	@FindBy(xpath = "//p[.='Add Admin']")
 	private WebElement adminSubLinkElement;
 	
+	@FindBy(xpath="//b[normalize-space()='Welcome!,']")
+	private WebElement welcomeElement1;
+	
 	
 	
 
@@ -103,6 +106,11 @@ public class HomePage {
 		return adminSubLinkElement;
 	}
 	
+	
+	public WebElement getWelcomElement1() {
+		return welcomeElement1;
+	}
+	
 	//BusinessLibrary
 		public void clickOnAddEmp()
 		{
@@ -126,7 +134,7 @@ public class HomePage {
 
 
 	public void logOut(WebDriver driver) {
-		welcomElement.click();
+		welcomeElement1.click();//welcomElement.click();
 		logOutElement.click();
 		wl.acceptAlert(driver);
 	}

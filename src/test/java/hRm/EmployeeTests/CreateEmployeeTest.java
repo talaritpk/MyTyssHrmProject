@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.apache.poi.EncryptedDocumentException;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
@@ -13,7 +14,7 @@ import hRm.GenericLibrary.BaseClass;
 import hRm.GenericLibrary.WebDriverLibrary;
 import hRm.ObjectRepository.EmployeePage;
 import hRm.ObjectRepository.HomePage;
-
+@Listeners(hRm.GenericLibrary.ListenerImplmentation.class)
 public class CreateEmployeeTest extends BaseClass {
 	WebDriverLibrary wl=new WebDriverLibrary();
 	@Test

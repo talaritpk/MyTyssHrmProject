@@ -77,7 +77,7 @@ public class DeleteBranchesTest extends BaseClass {
 		while (a <= 30) {
 			WebElement ele = bp.getDeleteBtn();
 			wL.clickAction(driver, ele);
-			for (int i = 21; i < 40; i++) {
+			for (int i = 37; i < 90; i++) {
 				WebElement delete2 = driver.findElement(By.xpath(beforeXpath + i + afterXpath));
 				wL.clickAction(driver, delete2);
 				wL.acceptAlert(driver);

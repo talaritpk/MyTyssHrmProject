@@ -4,16 +4,17 @@ import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import hRm.GenericLibrary.BaseClass;
 import hRm.GenericLibrary.WebDriverLibrary;
 import hRm.ObjectRepository.BranchPage;
 import hRm.ObjectRepository.HomePage;
 
-//@Listeners(hRm.GenericLibrary.ListenerImplmentation.class)
+@Listeners(hRm.GenericLibrary.ListenerImplmentation.class)
 public class CreateBranchTest extends BaseClass {
 	WebDriverLibrary wL=new WebDriverLibrary();
-	@Test
+	@Test()
 	public void createNewBranch() throws EncryptedDocumentException, IOException
 	{
 		HomePage hp=new HomePage(driver);

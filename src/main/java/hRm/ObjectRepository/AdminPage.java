@@ -1,6 +1,7 @@
 package hRm.ObjectRepository;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebDriver;
@@ -54,6 +55,22 @@ public class AdminPage extends WebDriverLibrary{
 	@FindBy(xpath="(//button[.='Close'])[1]")
 	private WebElement closeBtnElement;
 	
+	
+	
+	
+	@FindBy(xpath="//table//tbody//tr//td[6]")
+	private List<WebElement> emailAdss;
+	
+	@FindBy(xpath="//tbody/tr/td[9]/i[2]")
+	private List<WebElement> deleteBtns;
+	
+	
+	@FindBy(xpath="//div[@class='modal fade show']/descendant::button[@name='delete_admin'][.='Delete']")
+	private WebElement deleteBtns2;
+	
+	
+	
+	
 	public AdminPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
@@ -105,6 +122,30 @@ public class AdminPage extends WebDriverLibrary{
 		return closeBtnElement;
 	}
 	
+	
+	
+	
+	
+	
+	
+	public List<WebElement> getEmailAdss() {
+		return emailAdss;
+	}
+
+
+
+	public List<WebElement> getDeleteBtns() {
+		return deleteBtns;
+	}
+
+
+
+	public WebElement getDeleteBtns2() {
+		return deleteBtns2;
+	}
+
+
+
 	public void addAdmin(WebDriver driver) throws EncryptedDocumentException, IOException
 	{
 		addAdminRhnElement.click();

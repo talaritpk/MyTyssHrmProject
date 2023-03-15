@@ -2,6 +2,7 @@ package practice;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 
@@ -14,19 +15,22 @@ public class ReadDataFromCmd {
 	public void readDataFrom()
 	{
 		String BROWSER=System.getProperty("browser");
+		String URL=System.getProperty("url");
 		if(BROWSER.equals("chrome"))
 		{
-			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();
+			ChromeOptions cOptions=new ChromeOptions();
+			cOptions.addArguments("--remote-allow-origins=*");
+			//WebDriverManager.chromedriver().setup();
+			driver=new ChromeDriver(cOptions);
 		}
 		else if (BROWSER.equals("edge")) {
-			WebDriverManager.edgedriver().setup();
+			//WebDriverManager.edgedriver().setup();
 			driver=new EdgeDriver();
 		}
 		else {
 			System.out.println("Invalid Browser");
 		}
-		driver.get("www.fb.com");
+		driver.get(URL);
 	}
 
 }

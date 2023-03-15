@@ -14,13 +14,16 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
+
 import hRm.ObjectRepository.HomePage;
 import hRm.ObjectRepository.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	PropertyFileLibrary pfl = new PropertyFileLibrary();
-	WebDriverLibrary wl = new WebDriverLibrary();
+	public WebDriverLibrary wl = new WebDriverLibrary();
+	public ExcelFileLibrary el=new ExcelFileLibrary();
 	public WebDriver driver;
 	public static WebDriver sDriver;
 
@@ -29,9 +32,9 @@ public class BaseClass {
 		System.out.println("Database Connected Successfully");
 	}
 
-	// @Parameters("browser")
+	//@Parameters("browser")
 	@BeforeClass
-	public void bcConfig() throws IOException {
+	public void bcConfig(/*String BROWSER*/) throws IOException {
 		String BROWSER = pfl.readDataFromPropertyFile("browser");
 		String URL = pfl.readDataFromPropertyFile("url");
 		if (BROWSER.equalsIgnoreCase("CHROME")) 
@@ -42,8 +45,9 @@ public class BaseClass {
 		}
 		else if (BROWSER.equalsIgnoreCase("edge")) 
 		{
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
+			System.setProperty("webdriver.edge.driver", "C:\\Users\\tpkta\\Downloads\\selenium\\edgedriver_win64\\msedgedriver.exe");
+			//WebDriverManager.edgedriver().setup();
+			driver=new EdgeDriver();
 			System.out.println(BROWSER + "Browser launched");
 		}
 		else 
@@ -65,15 +69,15 @@ public class BaseClass {
 		/*Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter User");
 		String user = scanner.nextLine();*/
-		if (true/*user.equalsIgnoreCase("admin")*/)
-		{
+		//if (true/*user.equalsIgnoreCase("admin")*/)
+		//{
 			lp.loginToHrmAsHr(driver);
 			HomePage hp = new HomePage(driver);
 			String adminMail = hp.getAdminMailElement().getText();
 			String Uname = pfl.readDataFromPropertyFile("HrEmail");
 			Assert.assertEquals(adminMail, Uname);
 			Reporter.log("Home Page is Displayed", true);
-		} 
+		//} 
 		/*else if (user.equalsIgnoreCase("hrofficer"))
 		{
 			lp.loginToHrmAsHrOff(driver);

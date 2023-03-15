@@ -3,13 +3,15 @@
 <suite thread-count="2" parallel="tests" name="Suite">
   <test thread-count="2" name="Test1" parallel="tests">
     <classes>
-      <class name="hRm.CorporateTests.CreateCorporateTest"/>
+      <class name="hRm.CorporateTests.CreateMultipleCorporates"/>
+      <class name="hRm.EmployeeTests.CreateEmployeeTest"/>
     </classes>
   </test> <!-- Test -->
   
   <test thread-count="2" name="Test" parallel="tests">
     <classes>
-      <class name="hRm.EmployeeTests.CreateEmployeeTest"/>
+       <class name="hRm.AdminTests.CreateAdminTest"/>
+      <class name="hRm.BranchTests.CreateBranchTest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

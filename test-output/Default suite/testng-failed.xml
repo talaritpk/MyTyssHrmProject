@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="hRm.EmployeeTests.DeleteEmployeesDataTest">
+      <class name="practice.Irctc_01">
         <methods>
-          <include name="acConfig"/>
-          <include name="deleteData"/>
-          <include name="bsConfig"/>
-          <include name="asConfig"/>
-          <include name="amConfig"/>
-          <include name="bmConfig"/>
-          <include name="bcConfig"/>
+          <include name="irctc"/>
         </methods>
-      </class> <!-- hRm.EmployeeTests.DeleteEmployeesDataTest -->
+      </class> <!-- practice.Irctc_01 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

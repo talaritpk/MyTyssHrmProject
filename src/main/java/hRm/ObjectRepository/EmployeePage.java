@@ -113,27 +113,12 @@ public class EmployeePage {
 
 
 
-	public void setDeleteBtnElement(List<WebElement> deleteBtnElement) {
-		this.deleteBtnElement = deleteBtnElement;
-	}
-
-
-
-
-
-
 
 
 	public WebElement getDeleteLookUpIamgeElement() {
 		return deleteLookUpIamgeElement;
 	}
 
-
-
-
-	public void setDeleteLookUpIamgeElement(WebElement deleteLookUpIamgeElement) {
-		this.deleteLookUpIamgeElement = deleteLookUpIamgeElement;
-	}
 
 
 
@@ -215,6 +200,8 @@ public class EmployeePage {
 	public WebElement getCloseBtnElement() {
 		return closeBtnElement;
 	}
+	
+	
 
 	public void clickOnAddEmployeeRhn()
 	{
@@ -224,20 +211,20 @@ public class EmployeePage {
 	public void fillDataForEmpCreation(WebDriver driver)
 			throws EncryptedDocumentException, IOException, InterruptedException {
 
-		comIdElement.sendKeys(efl.readDataFromExcelFile("EmployeeDetails", 2, 0));
-		firstNameElement.sendKeys(efl.readDataFromExcelFile("EmployeeDetails", 2, 1));
-		lastNameElement.sendKeys(efl.readDataFromExcelFile("EmployeeDetails", 2, 2));
-		middleNameElement.sendKeys(efl.readDataFromExcelFile("EmployeeDetails", 2, 3));
-		dateFromElement.sendKeys(efl.readDataFromExcelFile("EmployeeDetails", 2, 4));
-		recentDatElement.sendKeys(efl.readDataFromExcelFile("EmployeeDetails", 2, 5));
+		comIdElement.sendKeys(efl.readDataFromExcelFile("employee", 2, 0));
+		firstNameElement.sendKeys(efl.readDataFromExcelFile("employee", 2, 1));
+		lastNameElement.sendKeys(efl.readDataFromExcelFile("employee", 2, 2));
+		middleNameElement.sendKeys(efl.readDataFromExcelFile("employee", 2, 3));
+		dateFromElement.sendKeys(efl.readDataFromExcelFile("employee", 2, 4));
+		recentDatElement.sendKeys(efl.readDataFromExcelFile("employee", 2, 5));
 		wl.handleDropDown(deptDD, 5);
 		wl.handleDropDown(brachDD, 2);
-		positionTextFiElement.sendKeys(efl.readDataFromExcelFile("EmployeeDetails", 2, 6));
-		contactNOTextFiElement.sendKeys(efl.readDataFromExcelFile("EmployeeDetails", 2, 7));
-		sssTextFiElement.sendKeys(efl.readDataFromExcelFile("EmployeeDetails", 2, 8));
-		tinTextFiElement.sendKeys(efl.readDataFromExcelFile("EmployeeDetails", 2, 9));
-		hdmfTextFiElement.sendKeys(efl.readDataFromExcelFile("EmployeeDetails", 2, 10));
-		gsisTextFiElement.sendKeys(efl.readDataFromExcelFile("EmployeeDetails", 2, 11));
+		positionTextFiElement.sendKeys(efl.readDataFromExcelFile("employee", 2, 6));
+		contactNOTextFiElement.sendKeys(efl.readDataFromExcelFile("employee", 2, 9));
+		sssTextFiElement.sendKeys(efl.readDataFromExcelFile("employee", 2, 8));
+		tinTextFiElement.sendKeys(efl.readDataFromExcelFile("employee", 2, 11));
+		hdmfTextFiElement.sendKeys(efl.readDataFromExcelFile("employee", 2, 12));
+		gsisTextFiElement.sendKeys(efl.readDataFromExcelFile("employee", 2, 13));
 		wl.scrollAction(driver, closeBtnElement);
 		wl.clickAction(driver, file201Element);
 		Runtime.getRuntime().exec("C:\\Users\\tpkta\\OneDrive\\Desktop\\AutoIt\\File201SoftCopy.au4.exe");

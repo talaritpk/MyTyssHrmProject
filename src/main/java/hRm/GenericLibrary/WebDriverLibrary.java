@@ -1,14 +1,23 @@
 package hRm.GenericLibrary;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Iterator;
+import java.util.Set;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.google.common.io.Files;
 
 public class WebDriverLibrary {
 	/**
@@ -196,6 +205,44 @@ public class WebDriverLibrary {
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript(script);
+	}
+	
+	
+	public String takeFailedTestCaseScreenShot(WebDriver driver, String screenshotName) throws IOException
+	{
+		TakesScreenshot ts=(TakesScreenshot)driver;
+		File src=ts.getScreenshotAs(OutputType.FILE);
+		File dtn=new File("./target/ScreenShots/"+screenshotName+".png");
+		Files.copy(src, dtn);
+		String path=dtn.getAbsolutePath();
+		return path;
+	}
+	
+	
+	public void switchToWindow(WebDriver driver, String partialWindowTitle)
+	{
+		//Step 1: get all the window handles
+		Set<String> windowIds = driver.getWindowHandles();
+		
+		//Step 2: iterate through all the window ids --- similar to foreach loop
+		Iterator<String> it = windowIds.iterator();
+		
+		//Step 3: navigate to each window and check the title
+		while(it.hasNext())
+		{
+			//Step 4: capture the individual window id
+			String winID = it.next();
+		
+			//Step 5: switch to that window and capture the title
+			String currentTitle = driver.switchTo().window(winID).getTitle();
+			
+			//Step 6: compare current title with partial title
+			if(currentTitle.contains(partialWindowTitle))
+			{
+				break;
+			}
+		}
+		
 	}
 	
 }

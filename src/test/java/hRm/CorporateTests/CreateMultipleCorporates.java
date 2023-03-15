@@ -105,7 +105,7 @@ public class CreateMultipleCorporates {
 	public void readData2() throws EncryptedDocumentException, IOException
 	{
 		Object[][] aObjects=efl.readMutipleDataFromExcelFile("CorN");
-		System.out.println(aObjects);
+		//System.out.println(aObjects);
 		
 		System.out.println(aObjects.length);
 		System.out.println(aObjects[0].length);

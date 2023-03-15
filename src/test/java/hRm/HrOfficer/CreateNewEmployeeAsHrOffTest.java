@@ -8,10 +8,11 @@ import org.testng.annotations.Test;
 import com.github.javafaker.Faker;
 
 import hRm.GenericLibrary.BaseClass;
+import hRm.GenericLibrary.BaseClassHrOff;
 import hRm.ObjectRepository.EmployeePage;
 import hRm.ObjectRepository.HomePage;
 
-public class CreateNewEmployeeAsHrOffTest extends BaseClass {
+public class CreateNewEmployeeAsHrOffTest extends BaseClassHrOff {
 	@Test
 	public void createNewEmployee() throws EncryptedDocumentException, IOException, InterruptedException
 	{
@@ -25,6 +26,9 @@ Faker fk=new Faker();
 		ep.fillDetailsAndSave(fk.idNumber().valid(), fk.name().firstName(), fk.name().lastName(), fk.name().nameWithMiddle(), fk.number().digits(6),
 				fk.number().digits(6), /*fk.number().digit(), fk.number().digit()*/ fk.name().name(), fk.number().digits(11), fk.name().name(), fk.name().name(), 
 				fk.name().name(), fk.name().name(), driver);
+		
+		
+		
 		
 	}
 	

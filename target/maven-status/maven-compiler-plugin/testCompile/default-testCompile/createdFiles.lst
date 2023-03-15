@@ -3,14 +3,14 @@ hRm\EmployeeTests\CreateEmployeeTest.class
 hRm\BranchTests\CreateMultipleBranchesTest.class
 hRm\EmployeeTests\DeleteEmployeesDataTest.class
 hRm\EmployeeTests\CreateMultipleEmployeesTest.class
-hRm\AdminTests\DeleteAdminsTest.class
 hRm\CorporateTests\CreateMultipleCorporates.class
 hRm\AdminTests\CreateMultipleAdminAccountsTest.class
 practice\ReadDataFromCmd.class
-practice\Random.class
 hRm\CorporateTests\DeleteCorporates.class
-hRm\BranchTests\CreateBranchTest.class
 hRm\CorporateTests\CreateCorporateTest.class
+hRm\AdminTests\DeleteAdminsTest.class
+practice\Random.class
+hRm\BranchTests\CreateBranchTest.class
 hRm\HrAssistant\CreateNewEmployeeAsHrAsstTest.class
 hRm\AdminTests\CreateAdminTest.class
 hRm\HrOfficer\CreateNewEmployeeAsHrOffTest.class
